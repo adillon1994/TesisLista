@@ -24,6 +24,7 @@ import android.widget.VideoView;
 import com.alberto.tesisjunta.DataStandings.American;
 import com.alberto.tesisjunta.DataStandings.National;
 import com.alberto.tesisjunta.DataWeather.Weather;
+import com.alberto.tesisjunta.LOGIN.LoginActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
@@ -40,7 +41,7 @@ public class MulticamaraActivity extends AppCompatActivity
     VideoView video3;
     VideoView video4;
     VideoView video5;
-    AdView adView;
+    AdView Publicidad;
 
 
     @Override
@@ -62,14 +63,14 @@ public class MulticamaraActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        adView = new AdView(this);
-        adView.setAdUnitId(getString(R.string.banner_ad_unit_id));
-        adView.setAdSize(AdSize.BANNER);
+        Publicidad = new AdView(this);
+        Publicidad.setAdUnitId(getString(R.string.banner_ad_unit_id));
+        Publicidad.setAdSize(AdSize.BANNER);
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.Publicidad);
         AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-        linearLayout.addView(adView);
+        Publicidad.loadAd(adRequest);
+        linearLayout.addView(Publicidad);
     }
 
     @Override
@@ -87,19 +88,6 @@ public class MulticamaraActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.multicamara, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            vamos = new Intent(MulticamaraActivity.this, Informacion.class);
-            startActivity(vamos);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -133,6 +121,14 @@ public class MulticamaraActivity extends AppCompatActivity
                 vamos = new Intent(MulticamaraActivity.this,Weather.class);
                 startActivity(vamos);
                 return true;
+            case R.id.action_settings:
+                vamos = new Intent(MulticamaraActivity.this, Informacion.class);
+                startActivity(vamos);
+                return true;
+            case R.id.logout:
+                vamos = new Intent(MulticamaraActivity.this,LoginActivity.class);
+                startActivity(vamos);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
 
@@ -142,7 +138,7 @@ public class MulticamaraActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
         video1 = (VideoView) findViewById(R.id.video11);
-        final Uri uri1 = Uri.parse("RTSP://192.168.198.136:5554/vs");
+        final Uri uri1 = Uri.parse("RTSP://192.168.198.127:5554/vs");
         video1.setVideoURI(uri1);
         video1.requestFocus();
         video1.start();
@@ -157,7 +153,7 @@ public class MulticamaraActivity extends AppCompatActivity
             }
         });
         video2 = (VideoView) findViewById(R.id.video22);
-        final Uri uri2 = Uri.parse("RTSP://192.168.198.136:5554/vs");
+        final Uri uri2 = Uri.parse("RTSP://192.168.198.127:5554/vs");
         video2.setVideoURI(uri2);
         video2.requestFocus();
         video2.start();
@@ -172,7 +168,7 @@ public class MulticamaraActivity extends AppCompatActivity
             }
         });
         video3 = (VideoView) findViewById(R.id.video33);
-        final Uri uri3 = Uri.parse("RTSP://192.168.198.136:5554/vs");
+        final Uri uri3 = Uri.parse("RTSP://192.168.198.127:5554/vs");
         video3.setVideoURI(uri3);
         video3.requestFocus();
         video3.start();

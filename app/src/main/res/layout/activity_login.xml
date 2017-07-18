@@ -16,7 +16,7 @@
         android:layout_marginTop="55dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Username"
+        android:hint="Usuario"
         android:text="" />
 
     <EditText
@@ -28,7 +28,7 @@
         android:layout_below="@+id/etUserName"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Password"
+        android:hint="Contrasena"
         android:text="" />
 
     <Button
@@ -38,7 +38,7 @@
         android:layout_below="@+id/etPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:text="LOGIN" />
+        android:text="Ingresar" />
 
     <TextView
         android:id="@+id/tvRegisterHere"
@@ -47,6 +47,15 @@
         android:layout_below="@+id/bLogin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
-        android:text="Register here" />
+        android:text="Registrar" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRegisterHere"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        app:srcCompat="@drawable/baseball" />
 
 </RelativeLayout>

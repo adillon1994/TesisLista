@@ -3,6 +3,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Cerrar Sesion"/>
+        <item
             android:id="@+id/weather"
             android:icon="@drawable/ic_menu_send"
             android:title="Clima" />
@@ -18,6 +22,12 @@
             android:id="@+id/calendar"
             android:icon="@drawable/ic_menu_send"
             android:title="Calendario" >
+
+            <item
+                android:id="@+id/action_settings"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/action_settings" />
+
     </item>
 
     <item
@@ -35,10 +45,10 @@
                 android:title="Liga Americana"/>
 
         </menu>
-
-
-
     </item>
-
     </group>
+
+
+
+
 </menu>

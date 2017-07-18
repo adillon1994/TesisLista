@@ -38,21 +38,21 @@ public class VideoGrande extends AppCompatActivity {
         switch (camara) {
             case 1: {
                 videoG = (VideoView) findViewById(R.id.video);
-                final Uri uri1 = Uri.parse("RTSP://192.168.198.136:5554/vs");
+                final Uri uri1 = Uri.parse("RTSP://192.168.198.127:5554/vs");
                 videoG.setVideoURI(uri1);
                 videoG.requestFocus();
                 videoG.start();
             }
             case 2: {
                 videoG = (VideoView) findViewById(R.id.video);
-                final Uri uri2 = Uri.parse("RTSP://192.168.198.136:5554/vs");
+                final Uri uri2 = Uri.parse("RTSP://192.168.198.127:5554/vs");
                 videoG.setVideoURI(uri2);
                 videoG.requestFocus();
                 videoG.start();
             }
             case 3: {
                 videoG = (VideoView) findViewById(R.id.video);
-                final Uri uri3 = Uri.parse("RTSP://192.168.198.136:5554/vs");
+                final Uri uri3 = Uri.parse("RTSP://192.168.198.127:5554/vs");
                 videoG.setVideoURI(uri3);
                 videoG.requestFocus();
                 videoG.start();

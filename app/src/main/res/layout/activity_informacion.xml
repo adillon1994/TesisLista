@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:text="Correo: tesisapp@gmail.com"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
 
     <TextView
         android:id="@+id/telefono"
@@ -22,14 +23,24 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:text="Telefono: (0212) 986.07.47 " />
+        android:text="Telefono: (0212) 986.07.47 "
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
 
     <TextView
         android:id="@+id/horario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Horario de atencion: 12am a 8pm"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:text="Horario de atencion: 12Am a 8 Pm" />
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="274dp"
+        android:layout_height="294dp"
+        app:srcCompat="@drawable/ucab"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
 
 </LinearLayout>

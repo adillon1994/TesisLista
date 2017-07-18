@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.alberto.tesisjunta.LOGIN.RegisterActivity">
 
     <EditText
@@ -11,10 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="14dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="Nombre"
         android:inputType="textPersonName"
         android:text="" />
 
@@ -22,26 +23,21 @@
         android:id="@+id/etUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Username"
-        android:text=""
-        android:layout_below="@+id/etName"
-        android:layout_alignLeft="@+id/etName"
-        android:layout_alignStart="@+id/etName" />
+        android:hint="Nombre de usuario"
+        android:text="" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Password"
+        android:hint="Contrasena"
         android:text=""
-        android:layout_below="@+id/etUserName"
-        android:layout_alignLeft="@+id/etUserName"
-        android:layout_alignStart="@+id/etUserName" />
+        android:layout_gravity="center_horizontal"/>
 
     <EditText
         android:id="@+id/etMail"
@@ -49,33 +45,31 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Mail"
+        android:hint="Correo"
         android:text=""
-        android:layout_below="@+id/etPassword"
-        android:layout_alignLeft="@+id/etPassword"
-        android:layout_alignStart="@+id/etPassword"
-        android:layout_marginTop="18dp" />
+        android:layout_gravity="center_horizontal" />
 
     <EditText
         android:id="@+id/etAged"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Aged"
+        android:hint="Edad"
         android:text=""
-        android:layout_below="@+id/etMail"
-        android:layout_alignLeft="@+id/etMail"
-        android:layout_alignStart="@+id/etMail" />
+        android:layout_gravity="center_horizontal" />
 
     <Button
-        android:id="@+id/bRegister"
+    android:id="@+id/bRegister"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Registrar"
+    android:layout_gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/bBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:text="REGISTER"
-        android:layout_below="@+id/etAged"
-        android:layout_centerHorizontal="true" />
+        android:text="Volver"
+        android:layout_gravity="center_horizontal"/>
 
-</RelativeLayout>
+</LinearLayout>
