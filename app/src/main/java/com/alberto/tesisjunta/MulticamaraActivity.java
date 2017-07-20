@@ -24,6 +24,7 @@ import android.widget.VideoView;
 import com.alberto.tesisjunta.DataStandings.American;
 import com.alberto.tesisjunta.DataStandings.National;
 import com.alberto.tesisjunta.DataWeather.Weather;
+import com.alberto.tesisjunta.LOGIN.Controladores.Controlador;
 import com.alberto.tesisjunta.LOGIN.LoginActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -62,6 +63,13 @@ public class MulticamaraActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        View cabecera =navigationView.getHeaderView(0);
+        TextView nombre = (TextView)cabecera.findViewById(R.id.Nombre);
+        String  [] dato = Controlador.perfil.split(":");
+        nombre.setText(dato[2]);
+        TextView correo = (TextView)cabecera.findViewById(R.id.CORREO);
+        correo.setText(dato[1]);
 
         Publicidad = new AdView(this);
         Publicidad.setAdUnitId(getString(R.string.banner_ad_unit_id));

@@ -27,7 +27,7 @@
         android:layout_alignStart="@+id/etUserName"
         android:layout_below="@+id/etUserName"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:hint="Contrasena"
         android:text="" />
 
