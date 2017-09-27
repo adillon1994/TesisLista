@@ -146,7 +146,7 @@ public class MulticamaraActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
         video1 = (VideoView) findViewById(R.id.video11);
-        final Uri uri1 = Uri.parse("RTSP://192.168.198.127:5554/vs");
+        final Uri uri1 = Uri.parse("RTSP://192.168.198.135:5554/vs");
         video1.setVideoURI(uri1);
         video1.requestFocus();
         video1.start();
@@ -154,14 +154,14 @@ public class MulticamaraActivity extends AppCompatActivity
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 ir = new Intent(MulticamaraActivity.this, VideoGrande.class);
-                ir.putExtra("camara", 1);
+                ir.putExtra("camara",1);
                 startActivity(ir);
 
                 return false;
             }
         });
         video2 = (VideoView) findViewById(R.id.video22);
-        final Uri uri2 = Uri.parse("RTSP://192.168.198.127:5554/vs");
+        final Uri uri2 = Uri.parse("RTSP://192.168.198.125:5554/vs");
         video2.setVideoURI(uri2);
         video2.requestFocus();
         video2.start();
@@ -169,14 +169,14 @@ public class MulticamaraActivity extends AppCompatActivity
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 ir = new Intent(MulticamaraActivity.this, VideoGrande.class);
-                ir.putExtra("camara", 2);
+                ir.putExtra("camara",2);
                 startActivity(ir);
 
                 return false;
             }
         });
         video3 = (VideoView) findViewById(R.id.video33);
-        final Uri uri3 = Uri.parse("RTSP://192.168.198.127:5554/vs");
+        final Uri uri3 = Uri.parse("RTSP://192.168.198.148:5554/vs");
         video3.setVideoURI(uri3);
         video3.requestFocus();
         video3.start();
@@ -184,14 +184,14 @@ public class MulticamaraActivity extends AppCompatActivity
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 ir = new Intent(MulticamaraActivity.this, VideoGrande.class);
-                ir.putExtra("camara", 3);
+                ir.putExtra("camara",3);
                 startActivity(ir);
 
                 return false;
             }
         });
         video4 = (VideoView) findViewById(R.id.video44);
-        final Uri uri4 = Uri.parse("RTSP://192.168.198.127:5554/vs");
+        final Uri uri4 = Uri.parse("RTSP://192.168.198.148:5554/vs");
         video4.setVideoURI(uri4);
         video4.requestFocus();
         video4.start();
@@ -199,7 +199,7 @@ public class MulticamaraActivity extends AppCompatActivity
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 ir = new Intent(MulticamaraActivity.this, VideoGrande.class);
-                ir.putExtra("camara", 4);
+                ir.putExtra("camara",4);
                 startActivity(ir);
 
                 return false;
@@ -214,7 +214,7 @@ public class MulticamaraActivity extends AppCompatActivity
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 ir = new Intent(MulticamaraActivity.this, VideoGrande.class);
-                ir.putExtra("camara", 5);
+                ir.putExtra("camara",5);
                 startActivity(ir);
 
                 return false;

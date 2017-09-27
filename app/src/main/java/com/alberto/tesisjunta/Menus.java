@@ -51,7 +51,7 @@ public class Menus extends AppCompatActivity {
             case 1:
                 pagina= (WebView)findViewById(R.id.webview);
 
-                pagina.loadUrl("http://mlb.mlb.com/stats/sortable.jsp#elem=%5Bobject+Object%5D&tab_level=child&click_text=Sortable+Player+hitting&game_type='R'&season=2017&season_type=ANY&league_code='MLB'&sectionType=sp&statType=hitting&page=1&ts=1497045416474");
+                pagina.loadUrl("http://mlb.mlb.com/stats/sortable.jsp#elem=%5Bobject+Object%5D&tab_level=child&click_text=Sortable+Player+hitting&game_type='R'&season=2017&season_type=ANY&league_code='MLB'&sectionType=sp&statType=hitting&page=1&ts=1501183639164");
 
                 pagina.setWebViewClient(new WebViewClient(){
                     public boolean shouldOverrideUrlloading(WebView view,String url){
